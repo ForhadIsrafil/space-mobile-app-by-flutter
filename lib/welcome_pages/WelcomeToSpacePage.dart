@@ -37,7 +37,7 @@ class _WelcomeToSpaceState extends State<WelcomeToSpace> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 30),
-                  child: Text("To Space!",
+                  child: Text("To Space !",
                       style: TextStyle(color: Colors.white, fontSize: 50)),
                 )
               ],

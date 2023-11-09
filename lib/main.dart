@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'welcome_pages/WelcomeToSpacePage.dart';
+import 'welcome_pages/LoginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WelcomeToSpace(),
+      home: const LoginPage(),
     );
   }
 }
