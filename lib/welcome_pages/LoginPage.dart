@@ -43,7 +43,6 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: 'Username',
                   labelStyle: const TextStyle(color: Colors.white),
                   hintStyle: const TextStyle(color: Colors.blue),
-                  // focusColor: Colors.blue,
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.blue),
                     borderRadius: BorderRadius.circular(10.0),
@@ -59,16 +58,29 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 50),
-            const TextField(
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(20),
-                label: Text("Password"),
-                hintText: 'Enter your password',
-                hintStyle: TextStyle(color: Colors.blue),
-                border: OutlineInputBorder(),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: TextField(
+                maxLength: 32,
+                style: const TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                    labelStyle: const TextStyle(color: Colors.white),
+                    label: const Text("Password"),
+                    hintText: 'Enter your password',
+                    hintStyle: const TextStyle(color: Colors.blue),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.blue),
+                        borderRadius: BorderRadius.circular(10.0)),
+                    border: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.blue),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.blue),
+                        borderRadius: BorderRadius.circular(10.0))),
               ),
             ),
-            const SizedBox(height: 35),
+            const SizedBox(height: 20),
             UnconstrainedBox(
               child: SizedBox(
                 width: 160,
@@ -79,14 +91,10 @@ class _LoginPageState extends State<LoginPage> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(11.0)),
                     ),
-                    side: const BorderSide(),
                     backgroundColor: Colors.blue,
-                    // padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                   ),
-                  child: const Text(
-                    'Log In',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: const Text('Log In',
+                      style: TextStyle(color: Colors.white)),
                 ),
               ),
             ),
@@ -94,8 +102,8 @@ class _LoginPageState extends State<LoginPage> {
             UnconstrainedBox(
               child: SizedBox(
                 child: TextButton(
-                  style: ElevatedButton.styleFrom(
-                      shape: const RoundedRectangleBorder()),
+                  // style: TextButton.styleFrom(
+                  //     shape: const RoundedRectangleBorder()),
                   onPressed: () {},
                   child: const Text(
                     'Forget Your Password!',
