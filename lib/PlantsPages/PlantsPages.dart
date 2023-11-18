@@ -60,17 +60,46 @@ class _PlantsPagesState extends State<PlantsPages> {
               child: ListTile(
                 title: Text("Planets",
                     style: TextStyle(
-                        color: Colors.white, fontSize: 50.0, letterSpacing: 2)),
+                        color: Colors.white, fontSize: 35.0, letterSpacing: 2)),
                 subtitle: Text("Solar System",
                     style: TextStyle(
-                        color: Colors.grey, fontSize: 20.0, letterSpacing: 2)),
+                        color: Colors.grey, fontSize: 15.0, letterSpacing: 2)),
               ),
             ),
-            Container(
-                decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("images/mars.png"), fit: BoxFit.fitWidth),
-            ))
+            const Center(
+              child: Image(
+                image: AssetImage("images/mars.png"),
+                height: 285.0,
+                width: 279.0,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  iconSize: 50.0,
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      iconColor: Colors.white),
+                  icon: const Icon(Icons.chevron_left),
+                  splashColor: Colors.cyan,
+                ),
+                const Text(
+                  "Mars",
+                  style: TextStyle(color: Colors.white, fontSize: 45.0),
+                ),
+                IconButton(
+                  iconSize: 50.0,
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      iconColor: Colors.white),
+                  icon: const Icon(Icons.chevron_right),
+                  splashColor: Colors.cyan,
+                ),
+              ],
+            )
           ],
         ),
       ),
