@@ -10,8 +10,8 @@ class PlantsPages extends StatefulWidget {
 class _PlantsPagesState extends State<PlantsPages> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.width;
+    double widthValue = MediaQuery.of(context).size.width;
+    double heightValue = MediaQuery.of(context).size.width;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -49,6 +49,8 @@ class _PlantsPagesState extends State<PlantsPages> {
         ],
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("images/galaxy.jpg"), fit: BoxFit.cover),
@@ -99,7 +101,38 @@ class _PlantsPagesState extends State<PlantsPages> {
                   splashColor: Colors.cyan,
                 ),
               ],
-            )
+            ),
+            const Row(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+
+              children: [
+                Image(
+                  image: AssetImage("images/moon.png"),
+                  // height: 120.0,
+                  // width: 120.0,
+                  fit: BoxFit.fitHeight,
+                  alignment: Alignment.topLeft,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "Mars is the fourth planet from the Sun– a dusty, cold, desert world with a very thin atmosphere. Mars is also a dynamic planetwith seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past.",
+                      style: TextStyle(color: Colors.white, fontSize: 12.0),
+                      // softWrap: false,
+                    ),
+                  ),
+                ),
+                Image(
+                  image: AssetImage("images/earth.png"),
+                  fit: BoxFit.fitWidth,
+                  // height: 120.0,
+                  // width: 120.0,
+                  alignment: Alignment.topRight,
+                ),
+              ],
+            ),
           ],
         ),
       ),
