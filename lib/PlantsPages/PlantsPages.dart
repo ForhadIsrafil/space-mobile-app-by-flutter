@@ -102,34 +102,37 @@ class _PlantsPagesState extends State<PlantsPages> {
                 ),
               ],
             ),
-            const Row(
+            const Stack(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image(
-                  image: AssetImage("images/moon.png"),
-                  // height: 120.0,
-                  // width: 120.0,
-                  fit: BoxFit.fitHeight,
-                  alignment: Alignment.topLeft,
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      "Mars is the fourth planet from the Sun– a dusty, cold, desert world with a very thin atmosphere. Mars is also a dynamic planetwith seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past.",
-                      style: TextStyle(color: Colors.white, fontSize: 12.0),
-                      // softWrap: false,
+                Positioned(
+                  // top: 0,
+                  left: -60,
+                  child:  Padding(
+                    padding: EdgeInsets.only(right: 50.0),
+                    child: Image(
+                      image: AssetImage("images/moon.png"),
                     ),
                   ),
                 ),
-                Image(
-                  image: AssetImage("images/earth.png"),
-                  fit: BoxFit.fitWidth,
-                  // height: 120.0,
-                  // width: 120.0,
-                  alignment: Alignment.topRight,
+                Padding(
+                  padding: EdgeInsets.only(top: 1.0,left: 80.0, bottom: 80,right: 80),
+                  child: Text(
+                    "Mars is the fourth planet from the Sun– a dusty, cold, desert world with a very thin atmosphere. Mars is also a dynamic planetwith seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past.",
+                    style: TextStyle(color: Colors.white, fontSize: 12.0),
+                    // softWrap: false,
+                  ),
+                ),
+                Positioned(
+                  right: -60,
+                  child: Image(
+                    image: AssetImage("images/earth.png"),
+                    fit: BoxFit.fitWidth,
+                    // height: 120.0,
+                    // width: 120.0,
+                    alignment: Alignment.topRight,
+                  ),
                 ),
               ],
             ),
