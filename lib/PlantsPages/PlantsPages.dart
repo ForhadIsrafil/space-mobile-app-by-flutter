@@ -10,8 +10,8 @@ class PlantsPages extends StatefulWidget {
 class _PlantsPagesState extends State<PlantsPages> {
   @override
   Widget build(BuildContext context) {
-    double widthValue = MediaQuery.of(context).size.width;
-    double heightValue = MediaQuery.of(context).size.width;
+    // double widthValue = MediaQuery.of(context).size.width;
+    // double heightValue = MediaQuery.of(context).size.width;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -102,6 +102,7 @@ class _PlantsPagesState extends State<PlantsPages> {
                 ),
               ],
             ),
+            const SizedBox(height: 15.0),
             const Stack(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               // crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,17 +110,15 @@ class _PlantsPagesState extends State<PlantsPages> {
                 Positioned(
                   // top: 0,
                   left: -60,
-                  child:  Padding(
-                    padding: EdgeInsets.only(right: 50.0),
-                    child: Image(
-                      image: AssetImage("images/moon.png"),
-                    ),
+                  child: Image(
+                    image: AssetImage("images/moon.png"),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 1.0,left: 80.0, bottom: 80,right: 80),
+                  padding: EdgeInsets.only(
+                      top: 10.0, left: 110.0, bottom: 120, right: 110),
                   child: Text(
-                    "Mars is the fourth planet from the Sun– a dusty, cold, desert world with a very thin atmosphere. Mars is also a dynamic planetwith seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past.",
+                    "Mars is the fourth planet from the Sun– a dusty, cold, desert world with a very thin atmosphere. Mars is also a dynamic planet with seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past.",
                     style: TextStyle(color: Colors.white, fontSize: 12.0),
                     // softWrap: false,
                   ),

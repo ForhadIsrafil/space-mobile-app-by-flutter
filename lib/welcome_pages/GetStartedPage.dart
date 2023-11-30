@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:space_mobile_app/welcome_pages/WelcomeToSpacePage.dart';
 
 class GetStart extends StatefulWidget {
   const GetStart({super.key});
@@ -36,7 +37,7 @@ class _GetStartState extends State<GetStart>
       children: [
         // Image widget
         Image.asset(
-          'images/getstarted.png',
+          'images/get-started.png',
           fit: BoxFit.cover,
           height: double.infinity,
           width: double.infinity,
@@ -56,7 +57,13 @@ class _GetStartState extends State<GetStart>
                     const LinearGradient(colors: [Colors.blue, Colors.white]),
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const WelcomeToSpace(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   elevation: 50,
                   backgroundColor: Colors.transparent,
