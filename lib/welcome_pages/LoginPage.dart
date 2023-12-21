@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:space_mobile_app/PlantsPages/PlantsPages.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -87,13 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: 160,
                 height: 45,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const PlantsPages(),
-                      ),
-                    );
-                  },
+                  onPressed: () => Get.to(const PlantsPages()),
                   style: ElevatedButton.styleFrom(
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(11.0)),

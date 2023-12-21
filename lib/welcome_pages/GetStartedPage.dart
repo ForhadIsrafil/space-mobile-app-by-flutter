@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:space_mobile_app/welcome_pages/WelcomeToSpacePage.dart';
+import 'package:get/get.dart';
 
 class GetStart extends StatefulWidget {
   const GetStart({super.key});
@@ -57,13 +58,7 @@ class _GetStartState extends State<GetStart>
                     const LinearGradient(colors: [Colors.blue, Colors.white]),
               ),
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const WelcomeToSpace(),
-                    ),
-                  );
-                },
+                onPressed: () => Get.to(const WelcomeToSpace()),
                 style: ElevatedButton.styleFrom(
                   elevation: 50,
                   backgroundColor: Colors.transparent,

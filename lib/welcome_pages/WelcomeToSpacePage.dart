@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:space_mobile_app/welcome_pages/LoginPage.dart';
-
+import 'package:get/get.dart';
 class WelcomeToSpace extends StatefulWidget {
   const WelcomeToSpace({super.key});
 
@@ -51,13 +51,7 @@ class _WelcomeToSpaceState extends State<WelcomeToSpace> {
                     icon: const Icon(Icons.expand_circle_down_outlined),
                     iconSize: 44,
                     color: Colors.white,
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const LoginPage(),
-                        ),
-                      );
-                    },
+                    onPressed: () => Get.to(const LoginPage()),
                   ),
                 )
               ],
